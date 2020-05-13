@@ -48,9 +48,14 @@ section.cover h1 {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100%; }
     section.cover h1 {
-      padding-left: 100px;
+      padding-left: 150px;
       font-size: 2.5em;
-      text-align: left; }
+      text-align: left;
+      line-height: 1.4; }
+    section.cover img.logo {
+      width: 30vw;
+      object-fit: contain;
+      padding-right: 150px; }
   section.invitation {
     grid-template-columns: 37% 63%;
     grid-template-rows: 100%; }
@@ -66,6 +71,19 @@ section.cover h1 {
       section.invitation div button {
         margin-top: 15px;
         width: 40%; } }
+
+.somos-fuddy {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px; }
+  .somos-fuddy p {
+    margin-bottom: 10px; }
+
+.logo-text {
+  margin-left: 10px;
+  height: 60px; }
 
 @media screen and (max-width: 1200px) {
   section.cover {

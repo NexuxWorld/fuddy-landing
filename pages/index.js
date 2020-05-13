@@ -12,18 +12,19 @@ export default function Home() {
       <main>
         <section className="cover">
           <h1>¿Que tal? <br />
-            Somos <span>Fuddy</span> <br />
-            Amantes de la innovación y apasionados porlas frutas y verduras</h1>
-          <img src="/images/logo.png" alt="" />
+            <div className="somos-fuddy" ><p>Somos</p> <img className="logo-text" src="/images/logo-txt.png" alt=""/> <br /></div>
+            Amantes de la buena comida y apasionados por las frutas y verduras
+          </h1>
+          <img className="logo" src="/images/fuddynamico.png" alt="" />
         </section>
         <section className="invitation" >
           <img src="/images/chica.png" alt="" />
           <div>
             <h1>
-              Con <span>Fuddy</span> ayudas a agricultores a
+              Con Fuddy ayudas a agricultores a
               vender sus productos en tu
-              comunidad y generas ingresos.
-              Entérate como convirtiéndote en:
+              comunidad y genera<span>$</span> ingreso<span>$</span>.
+              Entérate como, convirtiéndote en:
             </h1>
             <button className="button-primary" >Fuddy hero</button>
           </div>

@@ -60,9 +60,16 @@ section.cover {
     grid-template-rows: 100%;
 
     h1 {
-      padding-left: 100px;
+      padding-left: 150px;
       font-size: 2.5em;
       text-align: left;
+      line-height: 1.4;
+    }
+
+    img.logo{
+      width: 30vw;
+      object-fit: contain;
+      padding-right: 150px;
     }
   }
 
@@ -86,6 +93,22 @@ section.cover {
       }
     }
   }
+}
+
+.somos-fuddy{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  p{
+    margin-bottom: 10px;
+  }
+}
+
+.logo-text{
+  margin-left: 10px;
+  height: 60px;
 }
 
 // Mobile
