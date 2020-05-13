@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400&display=swap');
+@import './buttons.scss';
+
+$colorPrimary : #b6066a;
+
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: #fdf9f5;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+
+  h1 {
+    text-align: center;
+    margin: 10px;
+
+    span {
+      color: $colorPrimary;
+    }
+  }
+
+  img,
+  h1 {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+section.cover {
+  h1 {
+    text-align: center;
+    margin: 10px;
+
+    span {
+      color: $colorPrimary;
+    }
+  }
+
+  img,
+  h1 {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1199px) {
+
+  section.cover {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+
+    h1 {
+      padding-left: 100px;
+      font-size: 2.5em;
+      text-align: left;
+    }
+  }
+
+  section.invitation {
+    grid-template-columns: 37% 63%;
+    grid-template-rows: 100%;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      h1 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+      button{
+        margin-top: 15px;
+        width: 40%;
+      }
+    }
+  }
+}
+
+// Mobile
+@media screen and (max-width: 1200px) {
+  section.cover {
+    grid-template-rows: 70% 30%;
+    grid-template-columns: 100%;
+
+    h1 {
+      padding-left: 20px;
+      font-size: 2.5em;
+      text-align: left;
+      align-self: end;
+    }
+
+    img {
+      width: 80vw;
+      object-fit: contain;
+      align-self: start;
+    }
+  }
+
+  section.invitation {
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+
+    img{
+      width: 60vw;
+      object-fit: contain;
+      align-self: end;
+      justify-self: center;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+      button{
+        margin-top: 15px;
+        width: 70%;
+      }
+    }
+  }
+}
