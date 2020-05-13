@@ -5,12 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "server": "next start",
+    "install": "npm i",
+    "start": "npm-run-all install build server"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "next": "9.4.0",
     "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
