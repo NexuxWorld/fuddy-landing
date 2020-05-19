@@ -1,0 +1,444 @@
+@font-face{
+  font-family: "Montserrat-Bold";
+  src: url(../src/fonts/Montserrat-Bold.otf);
+}
+
+@font-face{
+  font-family: "Montserrat-Light";
+  src: url(../src/fonts/Montserrat-Light.otf);
+}
+
+:root {
+  --color-primary: #E60785;
+  --color-second: #FDCF39;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat-Light";
+}
+
+header{
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+header > #logo-header{
+  height: 40px;
+  margin-left: 20px;
+}
+
+header > #logo-header > img{
+  height: 100%;
+}
+
+button, a{
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-second);
+  font-family: "Montserrat-Bold";
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, .2);
+  outline: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1.tittle-section{
+  font-family: "Montserrat-Bold";
+  font-size: 30px;
+}
+
+#section-main{
+  width: 100vw;
+  padding: 80px 10% 80px;
+  background-color: var(--color-primary);
+}
+
+#section-main > img{
+  width: 100%;
+}
+
+#section-main > #text-section-main{
+  color: white;
+  width: 100%;
+}
+
+#section-main > #text-section-main > p{
+  line-height : 25px;
+}
+
+#second-section{
+  width: 100vw;
+  padding: 80px 10% 40px;
+}
+
+#second-section > img{
+  width: 100%;
+}
+
+#second-section > #text-section > p{
+  line-height : 25px;
+  text-align: center;
+}
+
+#second-section > #text-section > p > span > img{
+  height: 30px;
+  margin-bottom: -10px;
+}
+
+#second-section > #text-section > a{
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+#third-section{
+  width: 100vw;
+  padding: 0 10% 80px;
+}
+
+#third-section > .tittle-section{
+  text-align: center;
+  font-size: 32px;
+  color: var(--color-primary);
+  margin-bottom: 15px;
+}
+
+#third-section > img{
+  width: 40%;
+  margin: 0 30%;
+}
+
+#third-section > img:nth-child(4){
+  width: 50%;
+  margin: 0 25%;
+}
+
+#third-section > #text-section > h2{
+  font-family: "Montserrat-Bold";
+  font-size: 28px;
+  text-align: center;
+}
+
+#third-section > #text-section > p{
+  line-height : 25px;
+  text-align: center;
+}
+
+#inter-section{
+  background-color: var(--color-primary);
+  color: var(--color-second);
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
+
+#inter-section > span{
+  font-family: "Montserrat-Bold";
+}
+
+#inter-section > img{
+  position: absolute;
+  height: 80px;
+}
+
+#inter-section > img:nth-child(1){
+  margin-top: -60px;
+  margin-left: -80px;
+}
+
+#inter-section > span > span{
+  color: white;
+  font-family: "Montserrat-Bold";
+}
+
+#fourth-section{
+  width: 100vw;
+  padding: 0 10% 40px;
+}
+
+#fourth-section > img{
+  width: 90%;
+}
+
+#fourth-section > .tittle-section{
+  font-size: 32px;
+  color: var(--color-primary);
+}
+
+#fourth-section > span{
+  display: block;
+  font-size: 14px;
+  font-family: "Montserrat-Bold";
+  margin: 10px 0;
+}
+
+#fourth-section > #form-action > input{
+  width: 100%;
+  margin: 10px 0;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid var(--color-second);
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+#fourth-section > #form-action > #accept-conditions{
+  text-align: center;
+}
+
+#fourth-section > #form-action > #accept-conditions > span{
+  font-size: 14px;
+}
+
+#fourth-section > #form-action > button{
+  width: 100%;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+footer{
+  width: 100vw;
+  padding: 40px 10% 40px;
+  background-color: var(--color-primary);
+  text-align: center;
+}
+
+footer > img{
+  max-width: 100%;
+  height: 80px;
+}
+
+footer > #social > *{
+  margin: 10px 0;
+}
+
+footer > #social > #icons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer > #social > #icons > img{
+  height: 40px;
+  width: auto;
+}
+
+footer > #social > span{
+  font-size: 18px;
+  color: white;
+}
+
+footer > #social > #hashtag{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+@media screen and (min-width: 721px) {
+  
+}
+
+
+
+
+
+
+/*$colorPrimary : #b6066a;
+
+button{
+  cursor: pointer;
+}
+
+.button-primary{
+  border-radius: 10px;
+  height: 60px;
+  background-color: $colorPrimary;
+  color: #ffffff;
+  font-size: 2em;
+  border: none;
+}
+
+
+
+  
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400&display=swap');
+@import './buttons.scss';
+
+$colorPrimary : #b6066a;
+
+* {
+  margin: 0px;
+}
+
+body {
+  background-color: #fdf9f5;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+
+  display: grid;
+
+  h1 {
+    text-align: center;
+    margin: 10px;
+
+    span {
+      color: $colorPrimary;
+    }
+  }
+
+  img,
+  h1 {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+section.cover {
+  h1 {
+    text-align: center;
+    margin: 10px;
+
+    span {
+      color: $colorPrimary;
+    }
+  }
+
+  img,
+  h1 {
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+// Desktop
+@media screen and (min-width: 1081px) {
+
+  section.cover {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+
+    h1 {
+      padding-left: 150px;
+      font-size: 2.5em;
+      text-align: left;
+      line-height: 1.4;
+    }
+
+    img.logo{
+      width: 30vw;
+      object-fit: contain;
+      padding-right: 150px;
+    }
+  }
+
+  section.invitation {
+    grid-template-columns: 37% 63%;
+    grid-template-rows: 100%;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      h1 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+      button{
+        margin-top: 15px;
+        width: 40%;
+      }
+    }
+  }
+}
+
+.somos-fuddy{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 60px;
+  p{
+    margin-bottom: 10px;
+  }
+}
+
+.logo-text{
+  margin-left: 10px;
+  height: 60px;
+}
+
+// Mobile
+@media screen and (max-width: 1200px) {
+  section.cover {
+    grid-template-rows: 70% 30%;
+    grid-template-columns: 100%;
+
+    h1 {
+      padding-left: 20px;
+      font-size: 2.5em;
+      text-align: left;
+      align-self: end;
+    }
+
+    img {
+      width: 80vw;
+      object-fit: contain;
+      align-self: start;
+    }
+  }
+
+  section.invitation {
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+
+    img{
+      width: 60vw;
+      object-fit: contain;
+      align-self: end;
+      justify-self: center;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      h1 {
+        font-size: 1.5em;
+        text-align: center;
+      }
+      button{
+        margin-top: 15px;
+        width: 70%;
+      }
+    }
+  }
+}*/
