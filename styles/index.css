@@ -8,6 +8,16 @@
   src: url(../src/fonts/Montserrat-Light.otf);
 }
 
+@font-face{
+  font-family: "Montserrat-Regular";
+  src: url(../src/fonts/Montserrat-Regular.otf);
+}
+
+@font-face{
+  font-family: "Montserrat-Medium";
+  src: url(../src/fonts/Montserrat-Medium.otf);
+}
+
 :root {
   --color-primary: #E60785;
   --color-second: #FDCF39;
@@ -18,6 +28,10 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat-Light";
+}
+
+body{
+  overflow-x: hidden;
 }
 
 header{
@@ -46,10 +60,11 @@ button, a{
   font-size: 12px;
   letter-spacing: 0.5px;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   color: white;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, .2);
   outline: none;
+  text-align: center;
 }
 
 a{
@@ -104,7 +119,6 @@ h1.tittle-section{
   width: 100%;
   margin: 20px 0;
   font-size: 16px;
-  text-align: center;
 }
 
 #third-section{
@@ -119,23 +133,27 @@ h1.tittle-section{
   margin-bottom: 15px;
 }
 
-#third-section > img{
+#third-section > #content-section-third > div{
+  margin: 40px 0 0;
+}
+
+#third-section > #content-section-third > div > img{
   width: 40%;
   margin: 0 30%;
 }
 
-#third-section > img:nth-child(4){
+#third-section > #content-section-third > div:nth-child(2) > img{
   width: 50%;
   margin: 0 25%;
 }
 
-#third-section > #text-section > h2{
+#third-section > #content-section-third > div > h2{
   font-family: "Montserrat-Bold";
   font-size: 28px;
   text-align: center;
 }
 
-#third-section > #text-section > p{
+#third-section > #content-section-third > div > p{
   line-height : 25px;
   text-align: center;
 }
@@ -176,12 +194,12 @@ h1.tittle-section{
   width: 90%;
 }
 
-#fourth-section > .tittle-section{
+#fourth-section > #form-action > .tittle-section{
   font-size: 32px;
   color: var(--color-primary);
 }
 
-#fourth-section > span{
+#fourth-section > #form-action > span{
   display: block;
   font-size: 14px;
   font-family: "Montserrat-Bold";
@@ -254,8 +272,244 @@ footer > #social > #hashtag{
   color: white;
 }
 
-@media screen and (min-width: 721px) {
+@media screen and (max-width: 720px) {
   
+}
+
+@media screen and (min-width: 721px) {
+  header{
+    padding: 20px 80px;
+  }
+
+  header > #logo-header{
+    height: 60px;
+  }
+  
+  button, a{
+    font-size: 1.4rem;
+    padding: 20px 40px;
+  }
+  
+  h1.tittle-section{
+    font-family: "Montserrat-Bold";
+    font-size: 3.6rem;
+  }
+  
+  #section-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px auto 0;
+  }
+  
+  #section-main > img{
+    width: 40%;
+  }
+  
+  #section-main > #text-section-main{
+    width: 50%;
+  }
+  
+  #section-main > #text-section-main > p{
+    font-size: 1.6rem;
+    line-height : 2.5rem;
+    letter-spacing: .1rem;
+  }
+  
+  #second-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #second-section > img{
+    width: 40%;
+    padding: 80px auto 40px;
+  }
+
+  #second-section > #text-section{
+    width: 60%;
+    margin-left: 5%;
+  }
+  
+  #second-section > #text-section > p{
+    text-align: left;
+    font-size: 1.8rem;
+    line-height : 2.8rem;
+    letter-spacing: .1rem;
+    font-family: "Montserrat-Medium";
+  }
+  
+  #second-section > #text-section > p > span > img{
+    height: 60px;
+    margin-bottom: -20px;
+  }
+  
+  #second-section > #text-section > a{
+    font-size: 2rem;
+  }
+  
+  #third-section{
+    width: 100vw;
+    padding: 0;
+  }
+  
+  #third-section > .tittle-section{
+    font-size: 2.6rem;
+  }
+  
+  #third-section > #content-section-third{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #third-section > #content-section-third > div{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 2%;
+  }
+  
+  #third-section > #content-section-third > div > .img-third-section{
+    height: 200px;
+    margin-bottom: 40px;
+  }
+
+  #third-section > #content-section-third > div > .img-third-section > img{
+    height: 100%;
+  }
+  
+  #third-section > #content-section-third > div > h2{
+    font-size: 2rem;
+  }
+  
+  #third-section > #content-section-third > div > p{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-family: "Montserrat-Regular";
+  }
+  
+  #inter-section{
+    font-size: 2.4rem;
+    padding: 40px;
+  }
+  
+  #inter-section > span{
+    margin: 0 80px;
+  }
+  
+  #inter-section > img{
+    height: 120px;
+  }
+  
+  #inter-section > img:nth-child(1){
+    margin-top: -80px;
+    margin-left: -120px;
+  }
+  
+  #fourth-section{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+  }
+  
+  #fourth-section > img{
+    width: 40%;
+  }
+  
+  #fourth-section > #form-action{
+    margin-left: 20px;
+  }
+
+  #fourth-section > #form-action > .tittle-section{
+    font-size: 4rem;
+  }
+  
+  #fourth-section > #form-action > span{
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  #fourth-section > #form-action > input{
+    width: 49%;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 20px 15px;
+    font-family: "Montserrat-Regular";
+  }
+
+  #fourth-section > #form-action > input:nth-child(3){
+    margin-right: 1%;
+  }
+  
+  #fourth-section > #form-action > #accept-conditions{
+    text-align: left;
+  }
+  
+  #fourth-section > #form-action > #accept-conditions > span{
+    font-size: 1.2rem;
+  }
+  
+  #fourth-section > #form-action > button{
+    width: 100%;
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  footer{
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  footer > img{
+    width: 30%;
+    margin: 0 10%;
+    height: auto;
+  }
+
+  footer > #social{
+    width: 50%;
+  }
+
+  footer > #social > *{
+    margin: 10px 0;
+  }
+  
+  footer > #social > #icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  footer > #social > #icons > img{
+    height: 50px;
+    margin: 10px;
+  }
+  
+  footer > #social > span{
+    font-size: 1.5rem;
+    text-align: left;
+    width: 100%;
+    display: block;
+  }
+  
+  footer > #social > #hashtag{
+    justify-content: left;
+  }
+
+  footer > #social > #hashtag > span{
+    margin-right: 30px;
+    font-size: 1.5rem;
+  }
 }
 
 
