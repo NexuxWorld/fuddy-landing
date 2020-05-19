@@ -8,6 +8,16 @@
   src: url(../src/fonts/Montserrat-Light.otf);
 }
 
+@font-face{
+  font-family: "Montserrat-Regular";
+  src: url(../src/fonts/Montserrat-Regular.otf);
+}
+
+@font-face{
+  font-family: "Montserrat-Medium";
+  src: url(../src/fonts/Montserrat-Medium.otf);
+}
+
 :root {
   --color-primary: #E60785;
   --color-second: #FDCF39;
@@ -20,9 +30,13 @@
   font-family: "Montserrat-Light";
 }
 
+body{
+  overflow-x: hidden;
+}
+
 header{
   position: absolute;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,10 +60,11 @@ button, a{
   font-size: 12px;
   letter-spacing: 0.5px;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   color: white;
   box-shadow: 0px 8px 10px rgba(0, 0, 0, .2);
   outline: none;
+  text-align: center;
 }
 
 a{
@@ -62,7 +77,7 @@ h1.tittle-section{
 }
 
 #section-main{
-  width: 100vw;
+  width: 100%;
   padding: 80px 10% 80px;
   background-color: var(--color-primary);
 }
@@ -81,7 +96,7 @@ h1.tittle-section{
 }
 
 #second-section{
-  width: 100vw;
+  width: 100%;
   padding: 80px 10% 40px;
 }
 
@@ -104,11 +119,10 @@ h1.tittle-section{
   width: 100%;
   margin: 20px 0;
   font-size: 16px;
-  text-align: center;
 }
 
 #third-section{
-  width: 100vw;
+  width: 100%;
   padding: 0 10% 80px;
 }
 
@@ -119,23 +133,28 @@ h1.tittle-section{
   margin-bottom: 15px;
 }
 
-#third-section > img{
+#third-section > #content-section-third > div{
+  margin: 40px 0 0;
+}
+
+#third-section > #content-section-third > div > .img-third-section{
   width: 40%;
   margin: 0 30%;
+  max-width: 410px;
 }
 
-#third-section > img:nth-child(4){
-  width: 50%;
-  margin: 0 25%;
+#third-section > #content-section-third > div > .img-third-section > img{
+  width: 100%;
 }
 
-#third-section > #text-section > h2{
+#third-section > #content-section-third > div > h2{
   font-family: "Montserrat-Bold";
   font-size: 28px;
   text-align: center;
+  margin-top: 20px;
 }
 
-#third-section > #text-section > p{
+#third-section > #content-section-third > div > p{
   line-height : 25px;
   text-align: center;
 }
@@ -168,7 +187,7 @@ h1.tittle-section{
 }
 
 #fourth-section{
-  width: 100vw;
+  width: 100%;
   padding: 0 10% 40px;
 }
 
@@ -176,12 +195,12 @@ h1.tittle-section{
   width: 90%;
 }
 
-#fourth-section > .tittle-section{
+#fourth-section > #form-action > .tittle-section{
   font-size: 32px;
   color: var(--color-primary);
 }
 
-#fourth-section > span{
+#fourth-section > #form-action > span{
   display: block;
   font-size: 14px;
   font-family: "Montserrat-Bold";
@@ -199,12 +218,61 @@ h1.tittle-section{
   outline: none;
 }
 
-#fourth-section > #form-action > #accept-conditions{
-  text-align: center;
+#fourth-section > #form-action > #accept-conditions > .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-#fourth-section > #form-action > #accept-conditions > span{
-  font-size: 14px;
+#fourth-section > #form-action > #accept-conditions > .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  border: 2px solid var(--color-second);
+  border-radius: 4px;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: var(--color-second);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 4px;
+  top: .8px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 #fourth-section > #form-action > button{
@@ -214,7 +282,7 @@ h1.tittle-section{
 }
 
 footer{
-  width: 100vw;
+  width: 100%;
   padding: 40px 10% 40px;
   background-color: var(--color-primary);
   text-align: center;
@@ -254,191 +322,264 @@ footer > #social > #hashtag{
   color: white;
 }
 
-@media screen and (min-width: 721px) {
+@media screen and (max-width: 720px) {
   
 }
 
+@media screen and (min-width: 910px) {
+  header{
+    padding: 20px 80px;
+  }
 
-
-
-
-
-/*$colorPrimary : #b6066a;
-
-button{
-  cursor: pointer;
-}
-
-.button-primary{
-  border-radius: 10px;
-  height: 60px;
-  background-color: $colorPrimary;
-  color: #ffffff;
-  font-size: 2em;
-  border: none;
-}
-
-
-
+  header > #logo-header{
+    height: 60px;
+  }
   
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,400&display=swap');
-@import './buttons.scss';
+  button, a{
+    font-size: 1.4rem;
+    padding: 20px 40px;
+  }
+  
+  h1.tittle-section{
+    font-family: "Montserrat-Bold";
+    font-size: 3.6rem;
+  }
+  
+  #section-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px auto 0;
+  }
 
-$colorPrimary : #b6066a;
+  #section-main > #text-section-main{
+    margin-left: 20px;
+  }
 
-* {
-  margin: 0px;
-}
+  #section-main > img{
+    width: 40%;
+  }
+  
+  #section-main > #text-section-main{
+    width: 50%;
+  }
+  
+  #section-main > #text-section-main > p{
+    font-size: 1.6rem;
+    line-height : 2.5rem;
+    letter-spacing: .1rem;
+  }
+  
+  #second-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #second-section > img{
+    width: 40%;
+    padding: 80px auto 40px;
+  }
 
-body {
-  background-color: #fdf9f5;
-  font-family: 'Raleway', sans-serif;
-  overflow-x: hidden;
-}
+  #second-section > #text-section{
+    width: 60%;
+    margin-left: 5%;
+  }
+  
+  #second-section > #text-section > p{
+    text-align: left;
+    font-size: 1.8rem;
+    line-height : 2.8rem;
+    letter-spacing: .1rem;
+    font-family: "Montserrat-Medium";
+  }
+  
+  #second-section > #text-section > p > span > img{
+    height: 60px;
+    margin-bottom: -20px;
+  }
+  
+  #second-section > #text-section > a{
+    font-size: 2rem;
+  }
+  
+  #third-section{
+    width: 100%;
+    padding: 20px 0 60px;
+  }
+  
+  #third-section > .tittle-section{
+    font-size: 2.6rem;
+  }
+  
+  #third-section > #content-section-third{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    width: 100%;
+  }
 
-section {
-  height: 100vh;
-  width: 100vw;
+  #third-section > #content-section-third > div{
+    width: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 2%;
+  }
+  
+  #third-section > #content-section-third > div > .img-third-section{
+    width: 200px;
+    margin-bottom: 40px;
+  }
 
-  display: grid;
+  #third-section > #content-section-third > div > .img-third-section > img{
+    width: 100%;
+  }
+  
+  #third-section > #content-section-third > div > h2{
+    font-size: 2rem;
+  }
+  
+  #third-section > #content-section-third > div > p{
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-family: "Montserrat-Regular";
+  }
+  
+  #inter-section{
+    font-size: 2.4rem;
+    padding: 40px;
+  }
+  
+  #inter-section > span{
+    margin: 0 80px;
+  }
+  
+  #inter-section > img{
+    height: 120px;
+  }
+  
+  #inter-section > img:nth-child(1){
+    margin-top: -80px;
+    margin-left: -120px;
+  }
+  
+  #fourth-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+  }
+  
+  #fourth-section > img{
+    width: 40%;
+  }
+  
+  #fourth-section > #form-action{
+    margin-left: 20px;
+  }
 
-  h1 {
-    text-align: center;
+  #fourth-section > #form-action > .tittle-section{
+    font-size: 4rem;
+  }
+  
+  #fourth-section > #form-action > span{
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+  
+  #fourth-section > #form-action > input{
+    width: 49%;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 20px 15px;
+    font-family: "Montserrat-Regular";
+  }
+
+  #fourth-section > #form-action > input:nth-child(3){
+    margin-right: 1%;
+  }
+  
+  #fourth-section > #form-action > #accept-conditions{
+    text-align: left;
+  }
+  
+  #fourth-section > #form-action > #accept-conditions > .container {
+    font-size: 1.2rem;
+    font-family: "Montserrat-Regular";
+  }
+  
+  .checkmark {
+    height: 25px;
+    width: 25px;
+  }
+  
+  .container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  #fourth-section > #form-action > button{
+    width: 100%;
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  footer{
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  footer > img{
+    width: 30%;
+    margin: 0 10%;
+    height: auto;
+  }
+
+  footer > #social{
+    width: 50%;
+  }
+
+  footer > #social > *{
+    margin: 10px 0;
+  }
+  
+  footer > #social > #icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  footer > #social > #icons > img{
+    height: 50px;
     margin: 10px;
-
-    span {
-      color: $colorPrimary;
-    }
+  }
+  
+  footer > #social > span{
+    font-size: 1.5rem;
+    text-align: left;
+    width: 100%;
+    display: block;
+  }
+  
+  footer > #social > #hashtag{
+    justify-content: left;
   }
 
-  img,
-  h1 {
-    align-self: center;
-    justify-self: center;
-  }
-}
-
-section.cover {
-  h1 {
-    text-align: center;
-    margin: 10px;
-
-    span {
-      color: $colorPrimary;
-    }
-  }
-
-  img,
-  h1 {
-    align-self: center;
-    justify-self: center;
+  footer > #social > #hashtag > span{
+    margin-right: 30px;
+    font-size: 1.5rem;
   }
 }
-
-// Desktop
-@media screen and (min-width: 1081px) {
-
-  section.cover {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-
-    h1 {
-      padding-left: 150px;
-      font-size: 2.5em;
-      text-align: left;
-      line-height: 1.4;
-    }
-
-    img.logo{
-      width: 30vw;
-      object-fit: contain;
-      padding-right: 150px;
-    }
-  }
-
-  section.invitation {
-    grid-template-columns: 37% 63%;
-    grid-template-rows: 100%;
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 50px;
-      h1 {
-        font-size: 2.5em;
-        text-align: center;
-      }
-      button{
-        margin-top: 15px;
-        width: 40%;
-      }
-    }
-  }
-}
-
-.somos-fuddy{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  height: 60px;
-  p{
-    margin-bottom: 10px;
-  }
-}
-
-.logo-text{
-  margin-left: 10px;
-  height: 60px;
-}
-
-// Mobile
-@media screen and (max-width: 1200px) {
-  section.cover {
-    grid-template-rows: 70% 30%;
-    grid-template-columns: 100%;
-
-    h1 {
-      padding-left: 20px;
-      font-size: 2.5em;
-      text-align: left;
-      align-self: end;
-    }
-
-    img {
-      width: 80vw;
-      object-fit: contain;
-      align-self: start;
-    }
-  }
-
-  section.invitation {
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 100%;
-
-    img{
-      width: 60vw;
-      object-fit: contain;
-      align-self: end;
-      justify-self: center;
-    }
-
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 10px;
-      h1 {
-        font-size: 1.5em;
-        text-align: center;
-      }
-      button{
-        margin-top: 15px;
-        width: 70%;
-      }
-    }
-  }
-}*/
