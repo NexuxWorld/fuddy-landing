@@ -70,22 +70,23 @@
             </div>
             <div id="fourth-section">
                 <img src="./src/img/hero.png" alt="logotipo">
-                <div id="form-action">
+                <form id="form-action" action="./php/send.php">
                     <h1 class="tittle-section">Ponte la capa,<br>sé un fuddyhero.</h1>
                     <span>Mejora tu vida y la de tu comunidad.</span>
-                    <input type="text" name="name" placeholder="Nombre" required>
-                    <input type="number" name="phone" placeholder="Celular" required>
+                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="number" name="phone" placeholder="Celular">
                     <div id="accept-conditions">
                         <label class="container">
                             He leído los términos y condiciones
-                            <input type="checkbox" name="check" required>
+                            <input type="checkbox" name="check">
                             <span class="checkmark"></span>
                         </label>
                     </div>
-                    <button id="send-information">
+                    <button id="send-information" type="submit">
                         Enviar
                     </button>
-                </div>
+                    <div id="form-messages"></div>
+                </form>
             </div>
         </div>
         <footer>
