@@ -11,6 +11,7 @@
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous">
         </script>
+        <script type="text/javascript" src="./js/main.js"></script>
     </head>
     <body>
         <header>
@@ -69,15 +70,15 @@
             </div>
             <div id="fourth-section">
                 <img src="./src/img/hero.png" alt="logotipo">
-                <div id="form-action" name="form">
+                <div id="form-action">
                     <h1 class="tittle-section">Ponte la capa,<br>sé un fuddyhero.</h1>
                     <span>Mejora tu vida y la de tu comunidad.</span>
-                    <input type="text" name="name" placeholder="Nombre">
-                    <input type="number" name="phone" placeholder="Celular">
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="number" name="phone" placeholder="Celular" required>
                     <div id="accept-conditions">
                         <label class="container">
                             He leído los términos y condiciones
-                            <input type="checkbox">
+                            <input type="checkbox" name="check" required>
                             <span class="checkmark"></span>
                         </label>
                     </div>
