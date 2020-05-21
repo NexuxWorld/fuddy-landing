@@ -41,6 +41,7 @@ header{
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  background-color: var(--color-primary);
 }
 
 header > #logo-header{
@@ -52,7 +53,54 @@ header > #logo-header > img{
   height: 100%;
 }
 
-button, a{
+#flotant-buttons-container{
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#flotant-buttons-container > a{
+  display: block;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
+  margin: 5px;
+}
+
+#flotant-buttons-container > a#whatsapp{
+  padding: 15px;
+  background-color: var(--color-primary);
+}
+
+#flotant-buttons-container > a > img{
+  height: 100%;
+}
+
+#flotant-buttons-container > a#skip{
+  animation-duration: 2s;
+  animation-name: float;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float{
+  from{
+    transform: translate(0, -10px);
+  }
+
+  50%{
+    transform: translate(0, 0px);
+  }
+
+  to{
+    transform: translate(0, -10px);
+  }
+}
+
+button, .to-action{
   border: none;
   cursor: pointer;
   background-color: var(--color-second);
@@ -67,13 +115,34 @@ button, a{
   text-align: center;
 }
 
-a{
+a.to-action{
   text-decoration: none;
 }
 
 h1.tittle-section{
   font-family: "Montserrat-Bold";
   font-size: 30px;
+}
+
+.hidden{
+  display: none !important;
+}
+
+#container-politics{
+  padding: 150px 10% 0;
+}
+
+#container-politics > h1{
+  font-size: 2rem;
+}
+
+#container-politics > h2{
+  font-size: 1.3rem;
+}
+
+#container-politics > p{
+  margin: 15px 0 40px;
+  text-align: justify;
 }
 
 #section-main{
@@ -222,13 +291,54 @@ h1.tittle-section{
   outline: none;
 }
 
+#fourth-section > #form-action > #accept-conditions{
+  margin-bottom: 10px;
+}
+
+#fourth-section > #form-action > #accept-conditions > a{
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 24px;
+  font-family: "Montserrat-Regular";
+  text-decoration: none;
+  color: black;
+}
+
+#fourth-section > #form-action > #accept-conditions > a > img{
+  height: 14px;
+  width: auto;
+  transform: rotate(180deg);
+  margin-bottom: -2px;
+}
+
+#fourth-section > #form-action > #accept-conditions > a:hover > img{
+  animation-duration: 600ms;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: rotate(540deg);
+  }
+}
+
+#fourth-section > #form-action > #accept-conditions > a > img{
+  height: 14px;
+  width: auto;
+  transform: rotate(180deg);
+  margin-bottom: -2px;
+}
+
 #fourth-section > #form-action > #accept-conditions > .container {
   display: block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -285,6 +395,20 @@ h1.tittle-section{
   margin: 10px 0;
 }
 
+#form-messages{
+  width: 100%;
+  text-align: center;
+  font-family: "Montserrat-Medium";
+}
+
+#form-messages.success{
+  color: #98ca3f;
+}
+
+#form-messages.error{
+  color: red;
+}
+
 footer{
   width: 100%;
   padding: 40px 10% 40px;
@@ -305,12 +429,16 @@ footer > #social > #icons{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center ;
 }
 
-footer > #social > #icons > img{
+footer > #social > #icons > a{
   height: 40px;
-  width: auto;
+  margin: 10px;
+}
+
+footer > #social > #icons > a > img{
+  height: 100%;
 }
 
 footer > #social > span{
@@ -339,7 +467,7 @@ footer > #social > #hashtag{
     height: 60px;
   }
   
-  button, a{
+  button, .to-action{
     font-size: 1.4rem;
     padding: 20px 40px;
   }
@@ -403,7 +531,7 @@ footer > #social > #hashtag{
     margin-bottom: -20px;
   }
   
-  #second-section > #text-section > a{
+  #second-section > #text-section > .to-action{
     font-size: 2rem;
   }
   
@@ -509,12 +637,17 @@ footer > #social > #hashtag{
   #fourth-section > #form-action > #accept-conditions{
     text-align: left;
   }
-  
-  #fourth-section > #form-action > #accept-conditions > .container {
+
+  #fourth-section > #form-action > #accept-conditions > a{
+    margin-left: 35px;
     font-size: 1.2rem;
-    font-family: "Montserrat-Regular";
   }
-  
+
+  #fourth-section > #form-action > #accept-conditions > a > img{
+    height: 18px;
+    margin-bottom: -3px;
+  }
+
   .checkmark {
     height: 25px;
     width: 25px;
@@ -563,12 +696,16 @@ footer > #social > #hashtag{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: right;
   }
   
-  footer > #social > #icons > img{
+  footer > #social > #icons > a{
     height: 50px;
-    margin: 10px;
+  }
+
+  footer > #social > #icons > a > img{
+    height: 100%;
+    width: auto;
   }
   
   footer > #social > span{
