@@ -61,6 +61,10 @@ $(document).ready(function(){
     
         $(form).submit(function(event) {
             event.preventDefault();
+            if($('#container-politics').attr("class") !== "hidden"){
+                $('#container-page-sections').removeClass("hidden");
+                $('#container-politics').addClass("hidden");
+            }
             if(next){
                 var formData = $(form).serialize();
                 $.ajax({

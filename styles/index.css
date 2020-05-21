@@ -55,8 +55,8 @@ header > #logo-header > img{
 
 #flotant-buttons-container{
   position: fixed;
-  bottom: 40px;
-  right: 40px;
+  bottom: 10px;
+  right: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +65,7 @@ header > #logo-header > img{
 
 #flotant-buttons-container > a{
   display: block;
-  height: 60px;
+  height: 50px;
   border-radius: 50%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .2);
   margin: 5px;
@@ -74,6 +74,7 @@ header > #logo-header > img{
 #flotant-buttons-container > a#whatsapp{
   padding: 15px;
   background-color: var(--color-primary);
+  display: none;
 }
 
 #flotant-buttons-container > a > img{
@@ -464,6 +465,15 @@ footer > #social > #hashtag{
   }
 
   header > #logo-header{
+    height: 60px;
+  }
+
+  #flotant-buttons-container{
+    bottom: 40px;
+    right: 40px;
+  }
+  
+  #flotant-buttons-container > a{
     height: 60px;
   }
   
