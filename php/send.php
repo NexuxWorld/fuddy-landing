@@ -18,7 +18,7 @@
 
         if (mail($recipient, $subject, $email_content)) {
             http_response_code(200);
-            echo "Tu mensaje ha sido enviado";
+            echo "Bienvenido Fuddy hero, pronto nos pondremos en contacto contigo";
         } else {
             http_response_code(500);
             echo "¡Vaya! Algo salió mal y no pudimos enviar su mensaje.";
