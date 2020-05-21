@@ -10,7 +10,7 @@
             exit;
         }
 
-        $recipient = "jalvarezayola@gmail.com";
+        $recipient = "team@fuddy.co";
         $subject = "$name quiere ser un Fuddyhero";
 
         $email_content = "Nombre: $name\n";
