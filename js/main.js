@@ -4,7 +4,7 @@ $(document).ready(function(){
             $('#container-page-sections').removeClass("hidden");
             $('#container-politics').addClass("hidden");
         }
-        
+
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
         && location.hostname == this.hostname) {
             var $target = $(this.hash);
@@ -45,15 +45,15 @@ $(document).ready(function(){
                 $('span.checkmark').addClass("alert");
             }else{
                 $('span.checkmark').removeClass("alert");
-                if($('input[name="name"]').val().length == 0) {
+                if($('input[name="name"]').val().length === 0) {
                     $('input[name="name"]').addClass("alert");
                 }else{
                     $('input[name="name"]').removeClass("alert");
-                    if($('input[name="phone"]').val().length == 0) {
+                    if($('input[name="phone"]').val().length === 0) {
                         $('input[name="phone"]').addClass("alert");
-                        next = true;
                     }else{
                         $('input[name="phone"]').removeClass("alert");
+                        next = true;
                     }
                 }
             }
