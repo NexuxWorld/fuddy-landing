@@ -613,14 +613,18 @@ footer > #social > #hashtag{
     align-items: center;
     justify-content: center;
     padding: 80px 10%;
+    position: relative;
   }
   
-  #fourth-section > img{
-    width: 40%;
+  #fourth-section > .hero-women{
+    position: absolute;
+    width: 33vw;
+    bottom: 0;
+    left: 8vw;
   }
   
   #fourth-section > #form-action{
-    margin-left: 20px;
+    margin-left: 40vw;
   }
 
   #fourth-section > #form-action > .tittle-section{
