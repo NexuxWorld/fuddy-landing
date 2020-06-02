@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuddy</title>
+    <link rel="stylesheet" href="./styles/order.css" />
+    <link rel="icon" href="./src/img/favicon.png" type="image/png" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous">
+        </script>
+    <script type="text/javascript" src="./js/order.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div id="super" class="hidden">
+        <div id="modal">
+            <img onclick="showModal(false)" src="./src/img/close.svg" alt="" id="close">
+            <img src="./src/img/decoration-modal-top.png" alt="" id="decoration">
+            <p id="text-one">Tu pedido ha sido recibido exitosamente</p>
+            <p id="text-two">Ahora, estas más cerca de tu bono</p>
+            <p id="text-three">sigue enviando pedido de manera frecuente</p>
+            <div id="logo-modal">
+                <img src="./src/img/logo-fucsia.png" alt="">
+            </div>
+            <img src="" alt="">
+        </div>
+    </div>
+
+    <header id="header">
+        <div id="logo-header">
+            <img src="./src/img/logo-min-white.png" alt="logo">
+        </div>
+        <a id="order" class="to-action">Tengo un pedido</a>
+    </header>
+    
+    <div id="container-page">
+        <div id="container-page-sections">
+            <div id="section-order">
+                <h1 class="tittle-section">Bienvenido Fuddyhero</h1>
+                <h2 class="tittle-second-section">al portal de pedidos</h2>
+                <span class="text-complement">¿Listo para ordenar tu pedido?</span>
+
+                <div id="container-cards">
+                    <div class="card" id="super-smash-combo">
+                        <h3>Super smash combo</h3>
+                        <img src="./src/img/product.png" alt="">
+                        <p class="description">Una alimentación saludable y balanceada para familias de 4 a 6 personas</p>
+                        <div class="container-quantity">
+                            <span>Cantidad</span>
+                            <input type="number" class="number-quanty" value="1"/>
+                            <div class="arrows">
+                                <img src="./src/img/arrow.svg" alt="" id="up" onclick="setValue('super-smash-combo', 'up')">
+                                <img src="./src/img/arrow.svg" alt="" id="down" onclick="setValue('super-smash-combo', 'down')">
+                            </div>
+                        </div>
+                        <button onclick="agregarProducto('super-smash-combo')">agregar</button>
+                    </div>
+
+                    <div class="card" id="santo-grial">
+                        <h3>Santo grial</h3>
+                        <img src="./src/img/product.png" alt="">
+                        <p class="description">Una alimentación saludable y balanceada para familias de 4 a 6 personas</p>
+                        <div class="container-quantity">
+                            <span>Cantidad</span>
+                            <input type="number" class="number-quanty" value="1"/>
+                            <div class="arrows">
+                                <img src="./src/img/arrow.svg" alt="" id="up" onclick="setValue('santo-grial', 'up')">
+                                <img src="./src/img/arrow.svg" alt="" id="down" onclick="setValue('santo-grial', 'down')">
+                            </div>
+                        </div>
+                        <button onclick="agregarProducto('santo-grial')">agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="container-orders">
+            Tu pedido: 
+        </div>
+
+        <div id="fourth-section">
+            <img class="hero-img" src="./src/img/fuddy-order.png" alt="logotipo">
+            <form id="form-action" action="./php/sendOrder.php">
+                <h1 class="tittle-section">Llena tus datos y envía tu pedido</h1>
+                <span class="name-input">Nombre</span>
+                <input type="text" name="name" placeholder="Ej: Fuddy Hero">
+                <span class="name-input">Celular</span>
+                <input type="number" name="phone" placeholder="Ej: 301 7337567">
+                <span class="name-input">Dirección</span>
+                <input type="text" name="address" placeholder="Ej: Calle 21 #18-24">
+                <button id="send-information" type="submit">
+                    Enviar
+                </button>
+                <div id="form-messages"></div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <img src="./src/img/logo-line-white.png" alt="">
+        <div id="social">
+            <div id="icons">
+                <a href="https://www.instagram.com/fuddy.co/" target="_blank"><img src="./src/img/instagram.png"
+                        alt="Instagram"></a>
+            </div>
+            <span>Síguenos en nuestras redes</span>
+            <div id="hashtag">
+                <span>#Amercarjuntos</span>
+                <span>#Fuddyhero</span>
+            </div>
+        </div>
+    </footer>
+    <!--Facebook Pixel Code-->
+        <script>
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '282629159577818');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" src="https://www.facebook.com/tr?id=282629159577818&ev=PageView&noscript=1" />
+        </noscript>
+        <!--End Facebook Pixel Code -->
+    </body>
+</html>
