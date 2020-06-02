@@ -106,13 +106,16 @@ $(document).ready(function(){
         $(form).submit(function(event) {
             event.preventDefault();
             if(next){
-                var formData = $(form).serialize();
-                var serializedArr = JSON.stringify( order );
-                formData= `${formData}&${serializedArr}`;
+                var formData = $(form).serializeArray();
+                const name = formData[0].value;
+                const phone = formData[1].value;
+                const address = formData[2].value;
+                const pedido = order;
+                console.log(name+", "+phone+", "+address+", "+pedido)
                 $.ajax({
                     type: 'POST',
                     url: $(form).attr('action'),
-                    data: formData
+                    data: {name, phone, address, pedido}
                 })
                 .done(function(response) {
                     $(formMessages).removeClass('error');
