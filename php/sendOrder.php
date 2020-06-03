@@ -1,20 +1,11 @@
 <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = strip_tags(trim($_POST["name"]));
-				$name = str_replace(array("\r","\n"),array(" "," "),$name);
-        $phone = filter_var(trim($_POST["phone"]), FILTER_SANITIZE_EMAIL);
+        $data = $_POST["JSON"];
 
-        if ( empty($name) OR empty($phone)) {
-            http_response_code(400);
-            echo "No ha diligenciado los datos.";
-            exit;
-        }
+        $recipient = "pedidos@fuddy.co";
+        $subject = "Han hecho un pedido";
 
-        $recipient = "jalvarezayola@gmail.com";
-        $subject = "$name ha hecho un pedido";
-
-        $email_content = "Nombre: $name\n";
-        $email_content .= "Teléfono: $phone\n\n";
+        $email_content = $data;
 
         if (mail($recipient, $subject, $email_content)) {
             http_response_code(200);
