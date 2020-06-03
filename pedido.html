@@ -38,49 +38,40 @@
     
     <div id="container-page">
         <div id="container-page-sections">
-            <div id="section-order">
-                <h1 class="tittle-section">Bienvenido Fuddyhero</h1>
-                <h2 class="tittle-second-section">al portal de pedidos</h2>
-                <span class="text-complement">¿Listo para ordenar tu pedido?</span>
+            <h1 class="tittle-section">Bienvenido Fuddyhero</h1>
+            <h2 class="tittle-second-section">al portal de pedidos</h2>
+            <span class="text-complement">¿Listo para ordenar tu pedido?</span>
 
-                <div id="container-cards">
-                    <div class="card" id="super-smash-combo">
-                        <h3>Super smash combo</h3>
-                        <img src="./src/img/product.png" alt="">
-                        <p class="description">Una alimentación saludable y balanceada para familias de 4 a 6 personas</p>
-                        <div class="container-quantity">
-                            <span>Cantidad</span>
-                            <input type="number" class="number-quanty" value="1"/>
-                            <div class="arrows">
-                                <img src="./src/img/arrow.svg" alt="" id="up" onclick="setValue('super-smash-combo', 'up')">
-                                <img src="./src/img/arrow.svg" alt="" id="down" onclick="setValue('super-smash-combo', 'down')">
-                            </div>
+            <div id="container-cards">
+                <div class="card" id="dondecomen12">
+                    <h3>Donde comen 1 comen 2</h3>
+                    <img src="./src/img/product.png" alt="">
+                    <p class="description">Una alimentación saludable y balanceada para familias de 2 a 3 personas.</p>
+                    <div class="container-quantity">
+                        <span>Cantidad</span>
+                        <input type="number" class="number-quanty" value="1"/>
+                        <div class="arrows">
+                            <img src="./src/img/arrow.svg" alt="" id="up" onclick="setValue('dondecomen12', 'up')">
+                            <img src="./src/img/arrow.svg" alt="" id="down" onclick="setValue('dondecomen12', 'down')">
                         </div>
-                        <button onclick="agregarProducto('super-smash-combo')">agregar</button>
                     </div>
+                </div>
 
-                    <div class="card" id="santo-grial">
-                        <h3>Santo grial</h3>
-                        <img src="./src/img/product.png" alt="">
-                        <p class="description">Una alimentación saludable y balanceada para familias de 4 a 6 personas</p>
-                        <div class="container-quantity">
-                            <span>Cantidad</span>
-                            <input type="number" class="number-quanty" value="1"/>
-                            <div class="arrows">
-                                <img src="./src/img/arrow.svg" alt="" id="up" onclick="setValue('santo-grial', 'up')">
-                                <img src="./src/img/arrow.svg" alt="" id="down" onclick="setValue('santo-grial', 'down')">
-                            </div>
+                <div class="card" id="felices4">
+                    <h3>Felices los 4</h3>
+                    <img src="./src/img/product.png" alt="">
+                    <p class="description">Una alimentación saludable y balanceada para familias de 4 a 6 personas.</p>
+                    <div class="container-quantity">
+                        <span>Cantidad</span>
+                        <input type="number" class="number-quanty" value="2"/>
+                        <div class="arrows">
+                            <img src="./src/img/arrow.svg" alt="" id="up" onclick="setValue('felices4', 'up')">
+                            <img src="./src/img/arrow.svg" alt="" id="down" onclick="setValue('felices4', 'down')">
                         </div>
-                        <button onclick="agregarProducto('santo-grial')">agregar</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="container-orders">
-            Tu pedido: 
-        </div>
-
         <div id="fourth-section">
             <img class="hero-img" src="./src/img/fuddy-order.png" alt="logotipo">
             <form id="form-action" action="./php/sendOrder.php">
