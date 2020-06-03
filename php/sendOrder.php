@@ -3,14 +3,14 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = $_POST["JSON"];
 
-        $recipient = "jalvarezayola@gmail.com";
-        $subject = "Han hecho un pedido";
+        $recipient = "pedidos@fuddy.co";
+        $subject = explode(":", $data[0])[1]." ha hecho un pedido";
 
         $email_content = $data;
 
-        if (mail($recipient, $subject, implode("<br>",$data))) {
+        if (mail($recipient, $subject, implode("\n",$data))) {
             http_response_code(200);
-            echo "Pedido exitoso";
+            echo "Bienvenido Fuddy hero, pronto nos pondremos en contacto contigo";
         } else {
             http_response_code(500);
             echo "¡Vaya! Algo salió mal y no pudimos enviar su mensaje.";
