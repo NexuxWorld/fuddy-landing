@@ -174,23 +174,22 @@ a.to-action{
   padding-top: 120px;
 }
 
-#section-order{
-  display: block;
-  width: 100%;
-  padding: 80px 10% 80px;
-}
-
 #container-quantity{
   width: 100%;
 }
 
 .card{
-  box-sizing: border-box;
   border: solid 3px var(--color-primary);
   width: 80%;
+  height: 100%;
   margin: 40px 10%;
   border-radius: 8px;
-  padding: 40px 30px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card > h3{
@@ -201,7 +200,7 @@ a.to-action{
 }
 
 .card > img{
-  width: 90%;
+  width: 80%;
   margin: 0 5%;
 }
 
@@ -210,11 +209,17 @@ a.to-action{
   font-size: 18px;
   color: var(--color-gray);
   margin-bottom: 20px;
+  width: 90%;
 }
 
 .container-quantity{
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
+  height: 60px;
+  width: 90%;
+  border-radius: 16px;
+  background: var(--color-second);
 }
 
 .container-quantity > span{
@@ -389,6 +394,8 @@ footer > #social > #hashtag{
   color: white;
 }
 
+
+/* Desktop */
 @media screen and (min-width: 910px) {
   header{
     padding: 20px 80px;
@@ -471,24 +478,20 @@ footer > #social > #hashtag{
   #logo-modal > img{
     height: 100%;
   }
-  
-  #section-order{
-    padding: 80px 6% 80px;
-  }
 
   #container-cards{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding: 0px 80px 0px;
     overflow: hidden;
-    flex-wrap: wrap;
   }
   
   .card{
-    display: block;
-    width: 30%;
-    margin: 10px;
+    display: flex;
+    width: 30vw;
+    height: 85vh;
   }
   
   #fourth-section{

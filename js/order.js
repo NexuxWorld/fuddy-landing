@@ -56,7 +56,7 @@ function setValue(elem, dir){
     if(dir === "up"){
         val= val+1;
     }
-    if(dir === "down" && val > 1){
+    if(dir === "down" && val > 0){
         val= val-1;
     }
     $("#"+elem+"> div > input").val(val);
@@ -111,7 +111,8 @@ $(document).ready(function(){
                 const phone = formData[1].value;
                 const address = formData[2].value;
                 const pedido = order;
-                console.log(name+", "+phone+", "+address+", "+pedido)
+                console.log(name+", "+phone+", "+address+", "+pedido);
+                /*
                 $.ajax({
                     type: 'POST',
                     url: $(form).attr('action'),
@@ -134,7 +135,7 @@ $(document).ready(function(){
                     } else {
                         $(formMessages).text('¡Vaya! Ha ocurrido un error, tu pedido no se ha realizado');
                     }
-                });
+                });*/
             }
         });
 
