@@ -10,7 +10,7 @@
 
         if (mail($recipient, $subject, implode("\n",$data))) {
             http_response_code(200);
-            echo "Bienvenido Fuddy hero, pronto nos pondremos en contacto contigo";
+            echo "Pedido Exitoso";
         } else {
             http_response_code(500);
             echo "¡Vaya! Algo salió mal y no pudimos enviar su mensaje.";
