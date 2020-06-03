@@ -8,7 +8,7 @@
 
         $email_content = $data;
 
-        if (mail($recipient, $subject, implode("|",$data))) {
+        if (mail($recipient, $subject, implode("| ",$data))) {
             http_response_code(200);
             echo "Bienvenido Fuddy hero, pronto nos pondremos en contacto contigo";
         } else {
