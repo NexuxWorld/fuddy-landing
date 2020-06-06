@@ -170,6 +170,75 @@ a.to-action{
   display: none !important;
 }
 
+#super{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+
+#modal{
+  position: relative;
+  padding: 20px 20px 0;
+  border-radius: 20px;
+  background: var(--color-second);
+}
+
+#modal > #decoration{
+  position: absolute;
+  height: 150px;
+  top: -60px;
+  right: -40px;
+}
+
+#close{
+  width: 20px;
+  cursor: pointer;
+}
+
+#modal > p{
+  width: 300px;
+  margin: 0 20px;
+}
+
+#text-one{
+  width: 180px !important;
+  margin: 20px 80px !important;
+  font-family: "Montserrat-Bold";
+  font-size: 1rem;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+#text-two{
+  color: white;
+  font-family: "Montserrat-Bold";
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+#text-three{
+  font-family: "Montserrat-Bold";
+  font-size: 14px;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 20px !important;
+}
+
+#logo-modal{
+  width: 100%;
+  text-align: center;
+  height: 40px;
+}
+
+#logo-modal > img{
+  height: 100%;
+}
+
 #container-page-sections{
   padding-top: 120px;
 }
@@ -491,7 +560,10 @@ footer > #social > #hashtag{
   .card{
     display: flex;
     width: 30vw;
+    min-width: 350px;
     height: 85vh;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   
   #fourth-section{
