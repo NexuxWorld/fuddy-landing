@@ -1,5 +1,9 @@
+var next = false;
+var order = [];
+
 function setValue(elem, dir){
     let val = parseInt($("#"+elem+"> div > input").val());
+
     if(dir === "up"){
         val= val+1;
     }
@@ -7,6 +11,11 @@ function setValue(elem, dir){
         val= val-1;
     }
     $("#"+elem+"> div > input").val(val);
+
+    if($('#send-information').attr('class') !== 'hidden'){
+        $('#send-information').addClass('hidden');
+        $('#confirm-order').removeClass('hidden');
+    }
 }
 
 function showModal(value){
@@ -17,37 +26,60 @@ function showModal(value){
     }
 }
 
+function showConfirm(value){
+    if(value === true){
+        $('#super-confirm').removeClass('hidden');
+    }else{
+        $('#super-confirm').addClass('hidden');
+    }
+}
+
+function showButtonSendOrder(value){
+    if(value === true){
+        $('#send-information').removeClass('hidden');
+        $('#confirm-order').addClass('hidden');
+        next = true;
+    }else{
+        $('#send-information').addClass('hidden');
+        $('#confirm-order').removeClass('hidden');
+        next = false;
+    }
+}
+
 $(document).ready(function(){
     $(function() {
         var form = $('#form-action');
         var formMessages = $('#form-messages');
-        var next = false;
-        var order = [];
 
-        $('button#send-information').click(function() {
+        $('button#confirm-order').click(function() {
+            $("#content-confirm").empty();
             $(".card").each(function(){
                 const id = $(this).attr('id');
                 const cantidad = $('div > input', this).val();
                 if($('div > input', this).val() > 0){
                     order.push(`${id}: ${cantidad}`)
+                    var producto = document.createElement("span");
+                    var contenido = document.createTextNode(`${id}= ${cantidad}`);
+                    producto.appendChild(contenido);
+                    document.getElementById("content-confirm").appendChild(producto);
                 }
             });
             if($('input[name="name"]').val() === '') {
                 $('input[name="name"]').addClass("alert");
             }else{
-                $('input[name="phone"]').removeClass("alert");
+                $('input[name="name"]').removeClass("alert");
                 if($('input[name="phone"]').val() === '') {
                     $('input[name="phone"]').addClass("alert");
                 }else{
-                    $('input[name="address"]').removeClass("alert");
+                    $('input[name="phone"]').removeClass("alert");
                     if($('input[name="address"]').val() === '') {
                         $('input[name="address"]').addClass("alert");
                     }else{
-                        $('input[name="phone"]').removeClass("alert");
-                        if(order.length >= 0) {
+                        $('input[name="address"]').removeClass("alert");
+                        if(order.length > 0) {
                             $(formMessages).removeClass('error');
                             $(formMessages).text('');
-                            next = true;
+                            showConfirm(true);
                         }else{
                             $(formMessages).addClass('error');
                             $(formMessages).text('Debe agregar (un) producto(s) al pedido');

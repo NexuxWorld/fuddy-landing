@@ -29,11 +29,28 @@
         </div>
     </div>
 
+    <div id="super-confirm" class="hidden">
+        <div id="modal-confirm">
+            <img onclick="showConfirm(false)" src="./src/img/close-fucsia.svg" alt="" id="close">
+            <div id="content-confirm">
+                
+            </div>
+            <div id="container-buttons-confirm">
+                <button class="button-confirm" id="cancel" onclick="showConfirm(false)" >
+                    Cancelar
+                </button>
+                <button class="button-confirm" id="accept" onclick="showButtonSendOrder(true), showConfirm(false)">
+                    Aceptar
+                </button>
+            </div>
+        </div>
+    </div>
+
     <header id="header">
         <a id="logo-header" href="index.html">
             <img src="./src/img/logo-min-white.png" alt="logo">
         </a>
-        <a id="order" class="to-action">Tengo un pedido</a>
+        <!--<a id="order" class="to-action">Tengo un pedido</a>-->
     </header>
     
     <div id="container-page">
@@ -45,7 +62,7 @@
             <div id="container-cards">
                 <!-- COMBOS <div class="card" id="paTipaMi">
                     <h3>Pa' ti pa' mi</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/product.png" alt="">
                     <p class="description">Una alimentación saludable y balanceada pa' ti y pa' mi.</p>
                     <div class="container-quantity">
                         <span>Cantidad</span>
@@ -59,7 +76,7 @@
 
                 <div class="card" id="TomateChonto">
                     <h3>Tomate Chonto</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/TOMATE.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $885</span>
                         <span class="unit">Libra</span>
@@ -76,7 +93,7 @@
 
                 <div class="card" id="CebollaBlanca">
                     <h3>Cebolla Blanca</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/CEBOLLA BLANCA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.659</span>
                         <span class="unit">Libra</span>
@@ -93,7 +110,7 @@
 
                 <div class="card" id="Zanahoria">
                     <h3>Zanahoria</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/ZANAHORIA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.563</span>
                         <span class="unit">Libra</span>
@@ -110,7 +127,7 @@
 
                 <div class="card" id="PimentonVerde">
                     <h3>Pimentón Verde</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/PIMENTON VERDE.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.245</span>
                         <span class="unit">Libra</span>
@@ -127,7 +144,7 @@
 
                 <div class="card" id="Ajo">
                     <h3>Ajo</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/AJO.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.932</span>
                         <span class="unit">Atado</span>
@@ -144,7 +161,7 @@
 
                 <div class="card" id="Lechuga">
                     <h3>Lechuga</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/LECHUGA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $2.619</span>
                         <span class="unit">Unidad</span>
@@ -161,7 +178,7 @@
 
                 <div class="card" id="CebollaRoja">
                     <h3>Cebolla Roja</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/CEBOLLA MORADA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $2.718</span>
                         <span class="unit">Libra</span>
@@ -178,7 +195,7 @@
 
                 <div class="card" id="CebollaLarga">
                     <h3>Cebolla Larga</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/CEBOLLIN.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.000</span>
                         <span class="unit">Libra</span>
@@ -195,7 +212,7 @@
 
                 <div class="card" id="PimentonRojo">
                     <h3>Pimentón Rojo</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/PIMENTO ROJO.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.894</span>
                         <span class="unit">Libra</span>
@@ -212,7 +229,7 @@
 
                 <div class="card" id="Pepino">
                     <h3>Pepino</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/PEPINO.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $579</span>
                         <span class="unit">Libra</span>
@@ -229,7 +246,7 @@
 
                 <div class="card" id="Cilantro">
                     <h3>Cilantro</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/CILANTRO.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.732</span>
                         <span class="unit">Atado</span>
@@ -246,7 +263,7 @@
 
                 <div class="card" id="Aguacate">
                     <h3>Aguacate</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/AGUACATE.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $2.273</span>
                         <span class="unit">Unidad</span>
@@ -263,7 +280,7 @@
 
                 <div class="card" id="PapaRubi">
                     <h3>Papa Rubi</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/PAPA RUBI.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $938</span>
                         <span class="unit">Libra</span>
@@ -280,7 +297,7 @@
 
                 <div class="card" id="GuineoVerde">
                     <h3>GuineoVerde</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/GUINEO VERDE.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $214</span>
                         <span class="unit">Unidad</span>
@@ -297,7 +314,7 @@
 
                 <div class="card" id="Platano">
                     <h3>Plátano</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/PLATANO.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.214</span>
                         <span class="unit">Unidad</span>
@@ -314,7 +331,7 @@
 
                 <div class="card" id="Yuca">
                     <h3>Yuca</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/YUCA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $800</span>
                         <span class="unit">Libra</span>
@@ -331,7 +348,7 @@
 
                 <div class="card" id="Huevo">
                     <h3>Huevo</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/HUEVO.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $13.286</span>
                         <span class="unit">X30 Unid</span>
@@ -348,7 +365,7 @@
 
                 <div class="card" id="GuineoMaduro">
                     <h3>Guineo Maduro</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/GUINEO MADURO.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $214</span>
                         <span class="unit">Unidad</span>
@@ -365,7 +382,7 @@
 
                 <div class="card" id="ManzanaVerde">
                     <h3>Manzana Verde</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/MANZANA VERDE.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $866</span>
                         <span class="unit">Unidad</span>
@@ -382,7 +399,7 @@
 
                 <div class="card" id="ManzanaRoja">
                     <h3>Manzana Roja</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/MANZANA ROJA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $857</span>
                         <span class="unit">Unidad</span>
@@ -399,7 +416,7 @@
 
                 <div class="card" id="Maracuya">
                     <h3>Maracuyá</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/MARACUYA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $2.087</span>
                         <span class="unit">Libra</span>
@@ -416,7 +433,7 @@
 
                 <div class="card" id="UvaIsabelita">
                     <h3>Uva Isabelita</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/UVA ISABELITA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $3.274</span>
                         <span class="unit">Bandeja</span>
@@ -433,7 +450,7 @@
 
                 <div class="card" id="TomateDeArbol">
                     <h3>Tomate de Árbol</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/TOMATE DE ARBOL.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.694</span>
                         <span class="unit">Libra</span>
@@ -450,7 +467,7 @@
 
                 <div class="card" id="Pera">
                     <h3>Pera</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/PERA.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.984</span>
                         <span class="unit">Unidad</span>
@@ -467,7 +484,7 @@
 
                 <div class="card" id="Lulo">
                     <h3>Lulo</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/LULO.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $2.066</span>
                         <span class="unit">Libra</span>
@@ -484,7 +501,7 @@
 
                 <div class="card" id="Limon">
                     <h3>Limón</h3>
-                    <img src="./src/img/product.png" alt="">
+                    <img src="./src/img/fruits/LIMON.png" alt="">
                     <div class="price-and-unit">    
                         <span class="price">Precio: $1.270</span>
                         <span class="unit">Libra</span>
@@ -510,7 +527,10 @@
                 <input type="number" name="phone" placeholder="Ej: 301 7337567">
                 <span class="name-input">Dirección</span>
                 <input type="text" name="address" placeholder="Ej: Calle 21 #18-24">
-                <button id="send-information" type="submit">
+                <button id="confirm-order">
+                    Confirmar Pedido
+                </button>
+                <button id="send-information" class="hidden" type="submit">
                     Enviar
                 </button>
                 <div id="form-messages"></div>
