@@ -247,6 +247,7 @@ a.to-action{
   width: 100%;
 }
 
+/*----------------------------------------Tarjeta de producto*/
 .card{
   border: solid 3px var(--color-primary);
   width: 80%;
@@ -254,7 +255,6 @@ a.to-action{
   margin: 40px 10%;
   border-radius: 8px;
   padding: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -279,6 +279,27 @@ a.to-action{
   color: var(--color-gray);
   margin-bottom: 20px;
   width: 90%;
+}
+
+
+.card > .price-and-unit{
+  width: 90%; 
+}
+
+.card > .price-and-unit > span{
+  width: 100%;
+  display: block;
+  align-items: left;
+  font-family: "Montserrat-Bold";
+  font-size: 18px;
+  color: var(--color-gray);
+  margin: 0;
+}
+
+.card > .price-and-unit > span.unit{
+  margin-top: 5px;
+  color: var(--color-primary);
+  font-size: 22px;
 }
 
 .container-quantity{
@@ -336,6 +357,8 @@ a.to-action{
   margin: 30px 0 0;
 }
 
+
+/*--------------------------------------------sección de Formulario*/
 #fourth-section{
   width: 100%;
   padding: 0 10% 40px;
@@ -553,13 +576,14 @@ footer > #social > #hashtag{
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 0px 80px 0px;
+    padding: 0px 20px 0px;
     overflow: hidden;
+    flex-wrap: wrap;
   }
   
   .card{
     display: flex;
-    width: 30vw;
+    width: 28vw;
     min-width: 350px;
     height: 85vh;
     margin-left: 10px;
