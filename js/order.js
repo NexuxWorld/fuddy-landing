@@ -106,7 +106,6 @@ $(document).ready(function(){
                     `phone: ${formData[2].value}`,
                     `address: ${formData[3].value}`
                     )
-                console.log(pedido)
                 
                 $.ajax({
                     type: 'POST',
@@ -121,7 +120,11 @@ $(document).ready(function(){
                     $('input[name="client"]').val('');
                     $('input[name="phone"]').val('');
                     $('input[name="address"]').val('');
+                    $(".card").each(function(){
+                        $('div > input', this).val("0");
+                    });
                     showModal(true);
+                    next = false;
                 })
                 .fail(function(data) {
                     $(formMessages).removeClass('success');
