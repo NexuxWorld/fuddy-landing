@@ -3,6 +3,7 @@ var order = [];
 
 function setValue(elem, dir){
     let val = parseInt($("#"+elem+"> div > input").val());
+    next = false;
 
     if(dir === "up"){
         val= val+1;
@@ -68,21 +69,26 @@ $(document).ready(function(){
                 $('input[name="name"]').addClass("alert");
             }else{
                 $('input[name="name"]').removeClass("alert");
-                if($('input[name="phone"]').val() === '') {
-                    $('input[name="phone"]').addClass("alert");
+                if($('input[name="client"]').val() === '') {
+                    $('input[name="client"]').addClass("alert");
                 }else{
-                    $('input[name="phone"]').removeClass("alert");
-                    if($('input[name="address"]').val() === '') {
-                        $('input[name="address"]').addClass("alert");
+                    $('input[name="client"]').removeClass("alert");
+                    if($('input[name="phone"]').val() === '') {
+                        $('input[name="phone"]').addClass("alert");
                     }else{
-                        $('input[name="address"]').removeClass("alert");
-                        if(order.length > 0) {
-                            $(formMessages).removeClass('error');
-                            $(formMessages).text('');
-                            showConfirm(true);
+                        $('input[name="phone"]').removeClass("alert");
+                        if($('input[name="address"]').val() === '') {
+                            $('input[name="address"]').addClass("alert");
                         }else{
-                            $(formMessages).addClass('error');
-                            $(formMessages).text('Debe agregar (un) producto(s) al pedido');
+                            $('input[name="address"]').removeClass("alert");
+                            if(order.length > 0) {
+                                $(formMessages).removeClass('error');
+                                $(formMessages).text('');
+                                showConfirm(true);
+                            }else{
+                                $(formMessages).addClass('error');
+                                $(formMessages).text('Debe agregar (un) producto(s) al pedido');
+                            }
                         }
                     }
                 }
@@ -95,9 +101,10 @@ $(document).ready(function(){
                 var formData = $(form).serializeArray();
                 const pedido = order;
                 pedido.unshift(
-                    `name: ${formData[0].value}`, 
-                    `phone: ${formData[1].value}`, 
-                    `address: ${formData[2].value}`
+                    `name: ${formData[0].value}`,
+                    `client: ${formData[1].value}`,
+                    `phone: ${formData[2].value}`,
+                    `address: ${formData[3].value}`
                     )
                 console.log(pedido)
                 
@@ -111,7 +118,9 @@ $(document).ready(function(){
                     $(formMessages).addClass('success');
                     $(formMessages).text(response);
                     $('input[name="name"]').val('');
+                    $('input[name="client"]').val('');
                     $('input[name="phone"]').val('');
+                    $('input[name="address"]').val('');
                     showModal(true);
                 })
                 .fail(function(data) {
